@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.css" />
 <script src="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
 <script src="https://npm.elemecdn.com/meting2@0.0.1/js/Meting.min.js"></script>
+
 <style>
 /* ===== OpenList 梅花美化 - 磨砂 + 必应每日壁纸 ===== */
 
@@ -27,6 +28,19 @@ body {
   inset: 0;
   z-index: -999;
   pointer-events: none;
+}
+
+/* 必应每日一图（推荐使用重定向服务，自动获取最新） */
+.hope-ui-light {
+  background: url('https://bing.biturl.top/?resolution=1920x1080&format=image') center/cover fixed no-repeat !important;
+  transition: background-image 0.8s ease;
+}
+
+.hope-ui-dark {
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url('https://bing.biturl.top/?resolution=1920x1080&format=image') center/cover fixed no-repeat !important;
+  background-blend-mode: overlay;
+  color: rgba(255,255,255,0.92) !important;
 }
 
 /* 统一磨砂玻璃容器（最核心效果） */
