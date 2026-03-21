@@ -1,0 +1,100 @@
+<!-- ES6 Polyfill（兼容旧浏览器） -->
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=String.prototype.replaceAll"></script>
+
+<!-- 霞鹜文楷（强烈推荐的免费中文字体，阅读体验提升巨大） -->
+<link rel="stylesheet" href="https://hanzi.itedev.com/fonts/986/result.css" />
+
+<!-- Font Awesome 6 Free（图标库，后面可能用到小图标） -->
+<link rel="stylesheet" href="https://npm.elemecdn.com/font6pro@6.3.0/css/all.min.css" />
+
+<!-- 如果你想加音乐播放器（可选） -->
+<link rel="stylesheet" href="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.css" />
+<script src="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="https://npm.elemecdn.com/meting2@0.0.1/js/Meting.min.js"></script>
+<style>
+/* ===== OpenList 梅花美化 - 磨砂 + 必应每日壁纸 ===== */
+
+/* 全局字体 */
+*,
+body {
+  font-family: 'LXGW WenKai', system-ui, -apple-system, sans-serif !important;
+  margin: 0;
+}
+
+/* 可选：极简渐变背景画布（不喜欢可以删） */
+#canvas-basic {
+  position: fixed;
+  inset: 0;
+  z-index: -999;
+  pointer-events: none;
+}
+
+/* 统一磨砂玻璃容器（最核心效果） */
+.hope-ui-light .hope-c-PJLV-ikSuVsl-css,
+.hope-ui-light .hope-c-PJLV-ijgzmFG-css,          /* README */
+.hope-ui-light .body > .nav,
+.hope-ui-light .hope-c-PJLV-ihVEsOa-css,          /* 导航 */
+.hope-ui-light pre,
+.hope-ui-light .newValine,
+.hope-ui-light .hope-c-ivMHWx-hZistB-cv           /* 按钮等 */ {
+  background: rgba(255,255,255,0.55) !important;
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+  border-radius: var(--hope-radii-lg);
+  box-shadow: 0 6px 32px rgba(0,0,0,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+.hope-ui-dark .hope-c-PJLV-iiuDLME-css,
+.hope-ui-dark .hope-c-PJLV-ijgzmFG-css,
+.hope-ui-dark .body > .nav,
+.hope-ui-dark .hope-c-PJLV-ihVEsOa-css,
+.hope-ui-dark pre,
+.hope-ui-dark .newValine {
+  background: rgba(30,30,40,0.48) !important;
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+  border-radius: var(--hope-radii-lg);
+  box-shadow: 0 6px 32px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: rgba(245,245,255,0.94) !important;
+}
+
+/* 代码块夜间更友好 */
+.hope-ui-dark pre {
+  background: rgba(20,20,30,0.6) !important;
+}
+
+/* 顶部导航全透 */
+#root > .header {
+  background: transparent !important;
+  backdrop-filter: blur(12px);
+}
+
+/* 底部版权区微调（可选隐藏） */
+dibu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 0.92rem;
+  opacity: 0.8;
+}
+
+/* 评论区（Valine / Waline 等） */
+.newValine {
+  margin: 1.5rem auto;
+  width: min(96%, 960px);
+  padding: 1.5rem;
+  border-radius: var(--hope-radii-xl);
+  backdrop-filter: blur(10px);
+}
+
+/* 如果开了 APlayer 音乐播放器的小调整 */
+.aplayer {
+  bottom: 0 !important;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+</style>
